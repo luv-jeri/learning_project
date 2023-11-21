@@ -1,11 +1,7 @@
-import './Header.css'; 
-import React, { useState } from 'react';
-
-
- 
+import "./Header.css";
+import React, { useState } from "react";
 
 const Header = () => {
-
   const [isMenuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -14,18 +10,29 @@ const Header = () => {
 
   return (
     <header>
-      <nav className='nav-content'>
+      <nav className="nav-content">
         <div className="logo">
-          <img src="/logo.png"  alt="Logo" />
+          <img src="/logo.png" alt="Logo" />
         </div>
         <button className="left-side-button">Explore Colleges</button>
         <ul className="nav-links">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Our Courses</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#">Explore More</a></li>
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <a href="#">Our Courses</a>
+          </li>
+          <li>
+            <a href="#">Contact</a>
+          </li>
+          <li>
+            <a href="#">Explore More</a>
+          </li>
         </ul>
-         <button className={`menu-button ${isMenuOpen ? 'open' : ''}`} onClick={toggleMenu}>
+        <button
+          className={`menu-button ${isMenuOpen ? "open" : ""}`}
+          onClick={toggleMenu}
+        >
           <div className="bar"></div>
           <div className="bar"></div>
           <div className="bar"></div>
@@ -34,6 +41,6 @@ const Header = () => {
       </nav>
     </header>
   );
-}
+};
 
 export default Header;
